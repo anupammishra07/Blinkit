@@ -8,7 +8,8 @@ import SingleCategoryPage from './Pages/SingleCategoryPage'
 import ProductPage from "./Pages/ProductPage";
 import CheckoutPage from "./Pages/CheckoutPage";
 import AccountPage from "./Pages/AccountPage";
-
+import AddNewAddress from "./Components/AddNewAddress";
+import ViewDetails from "./Components/ViewDetails";
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
 
       <Cart />
       <Login/>
+      <AddNewAddress/>
+      <ViewDetails/>
+      
     </>
   );
 }

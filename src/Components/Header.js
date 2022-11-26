@@ -6,18 +6,26 @@ export default function Header() {
   let appContext = useContext(AppContext);
 
   return (
-    <header className="bg-white shadow-lg">
-      <nav className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <header className="bg-white ">
+      <nav className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-full py-3 flex items-center justify-between">
           {/* Logo Div */}
           <div>
             <Link to={"/"}>
             <img src={winkitLogo} className="h-10 w-auto" /></Link>
           </div>
+          {/* delivery address */} 
+          {/* <div className="w-auto">
+            <h1>Delivery in 9 minutes</h1>
+          </div> */}
+          {/* search box div */}
+          {/* <div className="max-w-7xl items-center">
+            <input className="rounded-lg max-w-full  shadow-lg border-none " type="text"></input>
+          </div> */}
 
           {/* Buttons Div */}
 
-          <div className="inline-flex space-x-4 items-center">
+          <div className="inline-flex space-x-12 items-center">
             <a href="#" onClick={()=>{appContext.setLoginOpen(true)}}>Login</a>
             <a
               onClick={()=>{appContext.setCartOpen(true)}}

@@ -9,7 +9,7 @@ export default function HomeBanner() {
   return (
     <div className="max-w-7xl mx-auto mt-10">
       <Slider
-        slidesToShow={3}
+        slidesToShow={4}
         autoplay={true}
         autoplaySpeed={2000}
         nextArrow={<NextArrow />}
@@ -24,10 +24,12 @@ export default function HomeBanner() {
               settings: { slidesToShow: 2, slidesToScroll: 1, infinite: true }
             }]}
       >
-        <img className="h-48 pl-8 pr-4 " src={slider1} />
-        <img className="h-48 pl-8 pr-4 " src={slider2} />
-        <img className="h-48 pl-8 pr-4" src={slider3} />
-        <img className="h-48 pl-8 pr-4" src={slider4} />
+        <img className="h-48 pl-8 pr-2 " src={slider1} />
+        <img className="h-48 pl-8 pr-2 " src={slider2} />
+        <img className="h-48 pl-8 pr-2" src={slider3} />
+        <img className="h-48 pl-8 pr-2" src={slider4} />
+        <img className="h-48 pl-8 pr-2 " src={slider1} />
+        <img className="h-48 pl-8 pr-2 " src={slider2} />
       </Slider>
     </div>
   );

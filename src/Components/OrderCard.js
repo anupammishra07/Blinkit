@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import orderImage from '../assets/box.png';
-
+import AppContext from "../Context/AppContext";
 export default function OrderCard() {
+  let appContext = useContext(AppContext);
   return (
     <div className="flex justify-between border border-gray-200 p-2 mt-2">
       <div className="flex space-x-3 items-center">
@@ -16,7 +17,7 @@ export default function OrderCard() {
       </div>
 
       <div>
-        <button className="border border-winkit-green rounded-md px-4 py-2 text-sm">View Details</button>
+        <button className="border border-winkit-green rounded-md px-4 py-2 text-sm" onClick={()=>{ appContext.setViewDetails(true)}}>View Details</button>
       </div>
     </div>
   );

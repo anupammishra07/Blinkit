@@ -3,7 +3,7 @@ import { Dialog } from "@headlessui/react";
 import AppContext from "../Context/AppContext";
 
 export default function Login() {
-  let [isOpen, setIsOpen] = useState(true);
+  // let [isOpen, setIsOpen] = useState(true);
   let appContext = useContext(AppContext);
   return (
     <Dialog

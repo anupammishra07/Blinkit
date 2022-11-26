@@ -1,13 +1,19 @@
 import React from "react";
-
+import { useContext } from "react";
 import { Tab } from "@headlessui/react";
 import OrderCard from "../Components/OrderCard";
 import AddressCard from "../Components/AddressCard";
 import AccountCard from "../Components/AccountCard";
+import AppContext from '../Context/AppContext';
+import AddNewAddress from "../Components/AddNewAddress";
+
 
 export default function AccountPage() {
+  let appContext = useContext(AppContext);
+  
   return (
     <Tab.Group>
+      
       <Tab.List className="max-w-7xl mx-auto">
     
         <Tab className="w-1/3 bg-gray-200 mt-12 py-4 rounded-md ">My Orders</Tab>
@@ -23,7 +29,7 @@ export default function AccountPage() {
 
         </Tab.Panel>
         <Tab.Panel>
-            <button className="border border-winkit-green px-4 py-2 inline-flex my-4">Add New Address</button>
+            <button className="border border-winkit-green px-4 py-2 inline-flex my-4" onClick={()=>{ appContext.setnewaddressIsOpen(true)}}>Add New Address</button>
             <AddressCard/>
             <AddressCard/>
             <AddressCard/>
